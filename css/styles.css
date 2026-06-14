@@ -414,6 +414,19 @@ body.modal-open {
   font-size: 0.85rem;
 }
 
+.site-credits {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 248, 231, 0.35);
+}
+
+.site-credits p {
+  margin: 0.35rem 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  opacity: 0.92;
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
