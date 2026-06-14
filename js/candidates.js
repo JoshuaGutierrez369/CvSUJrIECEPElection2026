@@ -1,11 +1,11 @@
 const CANDIDATE_CATEGORIES = [
   { id: "all", label: "All Candidates" },
-  { id: "execo", label: "EXECO", description: "President and all Vice Presidents" },
-  { id: "osec", label: "OSEC", description: "Secretary and Assistant Secretary" },
-  { id: "offin", label: "OFFIN", description: "Asst VP for Finance, Auditor, Business Manager, Logistics Director" },
-  { id: "oc3", label: "OC3", description: "PIO Internal, PIO External, Technical Creatives, GAD Rep" },
-  { id: "edu", label: "EDU", description: "Events Documentation Unit" },
-  { id: "osp", label: "OSP", description: "Sponsorship, Partnership, and Creative Director" }
+  { id: "execo", label: "Executive Office" },
+  { id: "osec", label: "Office of the Secretariat" },
+  { id: "offin", label: "Office of Finance" },
+  { id: "oc3", label: "Office of Communication and Content Creation" },
+  { id: "edu", label: "Events Documentation Unit" },
+  { id: "osp", label: "Office of Sponsorships and Partnerships" }
 ];
 
 const CANDIDATES = [
