@@ -3,7 +3,7 @@ const CANDIDATE_CATEGORIES = [
   { id: "execo", label: "EXECO", description: "President and all Vice Presidents" },
   { id: "osec", label: "OSEC", description: "Secretary and Assistant Secretary" },
   { id: "offin", label: "OFFIN", description: "Asst VP for Finance, Auditor, Business Manager, Logistics Director" },
-  { id: "oc3", label: "OC3", description: "PIO Internal, PIO External, Technical Creatives" },
+  { id: "oc3", label: "OC3", description: "PIO Internal, PIO External, Technical Creatives, GAD Rep" },
   { id: "edu", label: "EDU", description: "Events Documentation Unit" },
   { id: "osp", label: "OSP", description: "Sponsorship, Partnership, and Creative Director" }
 ];
@@ -407,7 +407,7 @@ const CANDIDATES = [
     order: 26,
     name: "Andrea Gail M. Loreto",
     position: "Gender and Development Representative",
-    category: "gad",
+    category: "oc3",
     image: "assets/candidates/60.png",
     motto: "Shattering stigmas, breaking gender norms.",
     platformItems: [
