@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="JIECEP Logo">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff3c4"/>
+      <stop offset="35%" stop-color="#ffd54f"/>
+      <stop offset="70%" stop-color="#ffb300"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+    <filter id="emboss" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#5d4037" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect x="8" y="8" width="104" height="104" rx="10" fill="url(#gold)" stroke="#8d6e00" stroke-width="3" filter="url(#emboss)"/>
+  <g fill="none" stroke="#5d4037" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M28 88 L28 32 L52 32 L52 56 L44 56 L44 40 L36 40 L36 80 L52 80 L52 64 L44 64"/>
+    <path d="M58 88 L58 32 L82 32 L82 40 L66 40 L66 56 L78 56 L78 64 L66 64 L66 80 L82 80 L82 88 L58 88"/>
+    <circle cx="44" cy="48" r="3" fill="#5d4037" stroke="none"/>
+    <circle cx="72" cy="72" r="3" fill="#5d4037" stroke="none"/>
+  </g>
+  <text x="60" y="108" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="9" font-weight="900" fill="#5d4037">Jr IECEP</text>
+</svg>

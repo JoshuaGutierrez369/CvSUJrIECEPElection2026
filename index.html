@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official candidates for the CvSU Jr. IECEP Elections A.Y. 2026-2027. Meet the aspiring leaders, explore their platforms, and stay informed." />
+  <title>CvSU Jr. IECEP Elections 2026 | Official Candidates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="halftone" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="logo-wrap">
+          <img src="assets/images/logo.svg" alt="CvSU Jr. IECEP Logo" />
+        </div>
+        <div class="org-info">
+          <p>Cavite State University - Don Severino Delas Alas Campus</p>
+          <p>Junior Institute of Electronics Engineers of the Philippines</p>
+        </div>
+      </div>
+
+      <section class="hero">
+        <span class="hero-eyebrow">Official Candidates</span>
+        <h1>
+          <span>2026 Elections</span>
+          CvSU Jr. IECEP
+        </h1>
+        <p class="hero-tagline">Sharks in Action, Leaders with Purpose.</p>
+        <div class="hero-meta">
+          <span>A.Y. 2026-2027</span>
+          <span>Fair · Honest · Transparent</span>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p>
+        The CvSU Jr. IECEP Commission on Elections proudly presents the official candidates
+        for A.Y. 2026-2027. All candidates have successfully completed the screening process
+        and complied with documentary requirements. Browse each profile to learn about their
+        mottos and platforms before casting your vote.
+      </p>
+    </section>
+
+    <section class="controls" aria-label="Candidate filters">
+      <div class="search-wrap">
+        <input id="search-input" type="search" placeholder="Search by name, position, or motto..." aria-label="Search candidates" />
+      </div>
+      <div id="filter-bar" class="filter-bar"></div>
+    </section>
+
+    <p id="result-count" class="result-count"></p>
+    <section id="candidate-grid" class="candidate-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>CvSU Jr. IECEP Commission on Elections</strong></p>
+      <p class="comelec-banner">Upholding Fair, Honest, and Transparent Elections</p>
+      <p>
+        <a href="https://facebook.com/cvsuece" target="_blank" rel="noopener noreferrer">facebook.com/cvsuece</a>
+        ·
+        <a href="mailto:cvsuece@gmail.com">cvsuece@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <div id="modal-backdrop" class="modal-backdrop" hidden></div>
+  <div id="candidate-modal" class="candidate-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-panel">
+      <button id="modal-close" class="modal-close" type="button" aria-label="Close candidate details">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/candidates.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
