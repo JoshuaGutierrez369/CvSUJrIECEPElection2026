@@ -414,8 +414,36 @@ body.modal-open {
   font-size: 0.85rem;
 }
 
-.site-credits {
+.comelec-members {
   margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 248, 231, 0.35);
+}
+
+.comelec-members__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-accent);
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comelec-members__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 640px;
+}
+
+.comelec-members__list li {
+  margin: 0.35rem 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.site-credits {
+  margin-top: 1.15rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(255, 248, 231, 0.35);
 }
