@@ -457,7 +457,7 @@ body.modal-open {
 
 .bgm-toggle {
   position: fixed;
-  top: 1rem;
+  bottom: 1rem;
   right: 1rem;
   z-index: 102;
   display: grid;
@@ -471,7 +471,7 @@ body.modal-open {
   color: var(--brown-dark);
   box-shadow: 3px 3px 0 var(--shadow);
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease;
+  transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease;
 }
 
 .bgm-toggle:hover {
@@ -481,6 +481,11 @@ body.modal-open {
 
 .bgm-toggle.is-playing {
   background: var(--gold);
+  color: var(--brown-dark);
+}
+
+.bgm-toggle.is-playing:hover {
+  background: var(--orange);
 }
 
 .bgm-toggle:focus-visible {
@@ -489,6 +494,19 @@ body.modal-open {
 }
 
 .bgm-toggle__icon {
+  display: block;
+  grid-area: 1 / 1;
+}
+
+.bgm-toggle__icon--on {
+  display: none;
+}
+
+.bgm-toggle.is-playing .bgm-toggle__icon--off {
+  display: none;
+}
+
+.bgm-toggle.is-playing .bgm-toggle__icon--on {
   display: block;
 }
 

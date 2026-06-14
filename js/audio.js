@@ -8,8 +8,6 @@
   }
 
   const VOLUME = 0.5;
-  const iconOn = toggle.querySelector(".bgm-toggle__icon--on");
-  const iconOff = toggle.querySelector(".bgm-toggle__icon--off");
 
   audio.volume = VOLUME;
   audio.muted = true;
@@ -21,8 +19,6 @@
       isPlaying ? "Mute background music" : "Enable background music"
     );
     toggle.classList.toggle("is-playing", isPlaying);
-    iconOn.hidden = !isPlaying;
-    iconOff.hidden = isPlaying;
   }
 
   function enableMusic() {
