@@ -1,12 +1,11 @@
 const CANDIDATE_CATEGORIES = [
   { id: "all", label: "All Candidates" },
-  { id: "executive", label: "Executive Board" },
-  { id: "secretariat", label: "Secretariat & PIO" },
-  { id: "documentation", label: "Documentation & Creatives" },
-  { id: "finance", label: "Finance & Business" },
-  { id: "partnerships", label: "Partnerships & Sponsorship" },
-  { id: "operations", label: "Logistics & Operations" },
-  { id: "gad", label: "Gender & Development" }
+  { id: "execo", label: "EXECO", description: "President and all Vice Presidents" },
+  { id: "osec", label: "OSEC", description: "Secretary and Assistant Secretary" },
+  { id: "offin", label: "OFFIN", description: "Asst VP for Finance, Auditor, Business Manager, Logistics Director" },
+  { id: "oc3", label: "OC3", description: "PIO Internal, PIO External, Technical Creatives" },
+  { id: "edu", label: "EDU", description: "Events Documentation Unit" },
+  { id: "osp", label: "OSP", description: "Sponsorship, Partnership, and Creative Director" }
 ];
 
 const CANDIDATES = [
@@ -15,7 +14,7 @@ const CANDIDATES = [
     order: 1,
     name: "Francine S. Sorongon",
     position: "President",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/35.png",
     motto: "Learning as I lead, serving as I learn.",
     platformSections: [
@@ -50,7 +49,7 @@ const CANDIDATES = [
     order: 2,
     name: "Dray Turry L. Santos",
     position: "Vice President for Internal Affairs",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/36.png",
     motto: "Lead with Action, Govern with Purpose",
     platformSections: [
@@ -80,7 +79,7 @@ const CANDIDATES = [
     order: 3,
     name: "Anjho T. Bitago",
     position: "Vice President for External Affairs",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/37.png",
     motto: "Win through your actions, never through argument",
     platformItems: [
@@ -99,7 +98,7 @@ const CANDIDATES = [
     order: 4,
     name: "Janna A. Landicho",
     position: "Vice President for Technical Operations",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/38.png",
     motto: "Own the outcome, trust the process.",
     platformText: "As VP for Technical Creatives, I will foster innovation, enhance technical and creative skills, provide opportunities for collaboration, and create platforms where every member can develop, showcase, and maximize their talents for academic and professional growth."
@@ -109,7 +108,7 @@ const CANDIDATES = [
     order: 5,
     name: "Dave Matthew N. Lumagui",
     position: "Vice President for Technical Operations",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/39.png",
     motto: "A leader's true power comes from their ability to empower others.",
     platformItems: [
@@ -123,7 +122,7 @@ const CANDIDATES = [
     order: 6,
     name: "Janna Fe C. Gloriani",
     position: "Vice President for Partnerships and Sponsorships",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/40.png",
     motto: "Relationship status: In partnership.",
     platformItems: [
@@ -139,7 +138,7 @@ const CANDIDATES = [
     order: 7,
     name: "Jemaelah P. Concepcion",
     position: "Vice President for Documentation & Records",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/41.png",
     motto: "Leading with Order, Recording with Purpose.",
     platformItems: [
@@ -156,7 +155,7 @@ const CANDIDATES = [
     order: 8,
     name: "Johnreign Jayden P. Ancheta",
     position: "Vice President for Documentation & Records",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/42.png",
     motto: "If things doesn't get better on their own, make it better with your all!",
     platformItems: [
@@ -170,7 +169,7 @@ const CANDIDATES = [
     order: 9,
     name: "Aliyah Sophia D. Pagara",
     position: "Vice President for Finance and Marketing",
-    category: "executive",
+    category: "execo",
     image: "assets/candidates/43.png",
     motto: "Transparency, Responsibility, Accountability.",
     platformItems: [
@@ -184,7 +183,7 @@ const CANDIDATES = [
     order: 10,
     name: "Ellyssa Terence L. Vidal",
     position: "Secretary",
-    category: "secretariat",
+    category: "osec",
     image: "assets/candidates/44.png",
     motto: "aspire to inspire before we expire",
     platformItems: [
@@ -198,7 +197,7 @@ const CANDIDATES = [
     order: 11,
     name: "Russell Johnsdher Glorioso",
     position: "Assistant Secretary",
-    category: "secretariat",
+    category: "osec",
     image: "assets/candidates/45.png",
     motto: "being a wise leader is not good enough, He must be a child of God in order to succeed in life",
     platformText: "As a candidate for Assistant Secretary of the Institute of Electronics Engineers of the Philippines, I am committed to promoting organization, transparency, and efficient communication within our chapter. I will ensure accurate documentation of meetings, timely dissemination of information, and proper record management to support the organization's activities and goals."
@@ -208,7 +207,7 @@ const CANDIDATES = [
     order: 12,
     name: "Racklen B. Añago",
     position: "Technical Creatives",
-    category: "documentation",
+    category: "oc3",
     image: "assets/candidates/46.png",
     motto: "Eyes on the Stars, Feet on the Ground",
     platformItems: [
@@ -222,7 +221,7 @@ const CANDIDATES = [
     order: 13,
     name: "Junix Saab S. Maya",
     position: "PIO for Internal Affairs",
-    category: "secretariat",
+    category: "oc3",
     image: "assets/candidates/47.png",
     motto: "Transparency in Action, Service in Motion.",
     platformItems: [
@@ -236,7 +235,7 @@ const CANDIDATES = [
     order: 14,
     name: "Sharri Alanis L. Reola",
     position: "PIO for External Affairs",
-    category: "secretariat",
+    category: "oc3",
     image: "assets/candidates/48.png",
     motto: "\"I am not throwing away my shot\" -Alexander Hamilton",
     platformItems: [
@@ -251,7 +250,7 @@ const CANDIDATES = [
     order: 15,
     name: "Mariel Nicole C. Tamayo",
     position: "Events Documentation Unit",
-    category: "documentation",
+    category: "edu",
     image: "assets/candidates/49.png",
     motto: "Building progress through reliable support and quiet dedication.",
     platformItems: [
@@ -268,7 +267,7 @@ const CANDIDATES = [
     order: 16,
     name: "Mary Katrice Anne R. Panganiban",
     position: "Events Documentation Unit",
-    category: "documentation",
+    category: "edu",
     image: "assets/candidates/50.png",
     motto: "\"Don't tell people how to do things. Tell them what to do and let them surprise you with their results.\" - Gen. George Patton",
     platformItems: [
@@ -281,7 +280,7 @@ const CANDIDATES = [
     order: 17,
     name: "Dallin Russel C. Velasco",
     position: "Events Documentation Unit",
-    category: "documentation",
+    category: "edu",
     image: "assets/candidates/51.png",
     motto: "Transforming limitations into possibilities.",
     platformTagline: "HELP, HANDLES, & HIGHLIGHTS",
@@ -296,7 +295,7 @@ const CANDIDATES = [
     order: 18,
     name: "Ahron Tristan B. Telmo",
     position: "Events Documentation Unit",
-    category: "documentation",
+    category: "edu",
     image: "assets/candidates/52.png",
     motto: "Dream BIG, Work Hard, Stay Humble",
     platformText: "As a member of the Events Documentation Unit, I am committed to keeping all event photos, videos, and documents organized and properly archived to ensure easy access and preservation of records. I will strive to submit accurate documentation, reports, and outputs on or before their deadlines while ensuring complete coverage of all organizational events and activities.\n\nThrough close collaboration with officers and members, I will help preserve important memories, achievements, and records of the organization. I am also dedicated to providing timely updates and documentation of organizational accomplishments and ensuring that every event is properly documented from preparation to completion. Through responsibility, teamwork, and attention to detail, I aim to contribute to a reliable and effective documentation system for the organization."
@@ -306,7 +305,7 @@ const CANDIDATES = [
     order: 19,
     name: "Gabriel Reinharth R. Velasco",
     position: "Assistant Vice President for Finance and Marketing",
-    category: "finance",
+    category: "offin",
     image: "assets/candidates/53.png",
     motto: "Responsible Finance, Stronger Organization",
     platformText: "As Vice President for Finance, I will promote transparency, accountability, and efficient financial management by providing clear financial reports, maintaining accurate records, and ensuring that every peso contributes to the growth and success of our organization."
@@ -316,7 +315,7 @@ const CANDIDATES = [
     order: 20,
     name: "Alezzandra Nicole Y. Legaspi",
     position: "Auditor",
-    category: "finance",
+    category: "offin",
     image: "assets/candidates/54.png",
     motto: "Passion into purpose.",
     platformItems: [
@@ -330,7 +329,7 @@ const CANDIDATES = [
     order: 21,
     name: "Naomie Danielle L. Largado",
     position: "Business Manager",
-    category: "finance",
+    category: "offin",
     image: "assets/candidates/55.png",
     motto: "True leadership is not about being ahead, it's about bringing everyone along and leaving no one behind.",
     platformItems: [
@@ -344,7 +343,7 @@ const CANDIDATES = [
     order: 22,
     name: "Melcha Marie T. Gayoma",
     position: "Logistics Director",
-    category: "operations",
+    category: "offin",
     image: "assets/candidates/56.png",
     motto: "Excellence in the details. Elegance in the execution.",
     platformItems: [
@@ -358,7 +357,7 @@ const CANDIDATES = [
     order: 23,
     name: "Dominic G. Basco",
     position: "Sponsorship and Funding Officer",
-    category: "partnerships",
+    category: "osp",
     image: "assets/candidates/57.png",
     motto: "Take the risk or lose the chance, for a better future",
     platformItems: [
@@ -371,7 +370,7 @@ const CANDIDATES = [
     order: 24,
     name: "Anthony Luis S. Baigan",
     position: "Partnership Maintenance and Liaison Officer",
-    category: "partnerships",
+    category: "osp",
     image: "assets/candidates/58.png",
     motto: "A true act of goodwill, always sparks another.",
     platformItems: [
@@ -393,7 +392,7 @@ const CANDIDATES = [
     order: 25,
     name: "John Kale F. Cañeza",
     position: "OSP Creative Director",
-    category: "partnerships",
+    category: "osp",
     image: "assets/candidates/59.png",
     motto: "Creativity You Can Trust, Partnerships You Can See.",
     platformItems: [

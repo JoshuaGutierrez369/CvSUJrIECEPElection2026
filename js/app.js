@@ -116,13 +116,26 @@
   function renderFilters() {
     filterBar.innerHTML = CANDIDATE_CATEGORIES.map(function (cat) {
       const active = cat.id === activeCategory ? " is-active" : "";
+      const officeClass = cat.id === "all" ? "" : " filter-btn--office";
+      const title = cat.description ? ' title="' + escapeHtml(cat.description) + '"' : "";
+      const desc =
+        cat.description
+          ? '<span class="filter-btn__desc">' + escapeHtml(cat.description) + "</span>"
+          : "";
+
       return (
         '<button type="button" class="filter-btn' +
+        officeClass +
         active +
         '" data-category="' +
         cat.id +
-        '">' +
+        '"' +
+        title +
+        ">" +
+        '<span class="filter-btn__code">' +
         escapeHtml(cat.label) +
+        "</span>" +
+        desc +
         "</button>"
       );
     }).join("");
