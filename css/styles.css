@@ -469,6 +469,36 @@ body.modal-open {
   text-transform: uppercase;
 }
 
+.modal-credentials {
+  margin-bottom: 1.35rem;
+  padding: 1rem 1.1rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 2px solid var(--brown-dark);
+  border-radius: 12px;
+}
+
+.modal-credentials h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.credentials-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.credentials-list li {
+  margin-bottom: 0.55rem;
+  line-height: 1.55;
+}
+
+.credentials-list li:last-child {
+  margin-bottom: 0;
+}
+
 .modal-platforms p,
 .modal-platforms li {
   line-height: 1.6;

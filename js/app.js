@@ -19,6 +19,25 @@
     return div.innerHTML;
   }
 
+  function renderCredentials(candidate) {
+    const items = CANDIDATE_CREDENTIALS[candidate.id];
+    if (!items || !items.length) {
+      return "";
+    }
+
+    return (
+      '<div class="modal-credentials">' +
+      "<h3>Leadership Credentials</h3>" +
+      '<ul class="credentials-list">' +
+      items
+        .map(function (item) {
+          return "<li>" + escapeHtml(item) + "</li>";
+        })
+        .join("") +
+      "</ul></div>"
+    );
+  }
+
   function renderPlatformContent(candidate) {
     let html = "";
 
@@ -197,6 +216,7 @@
       '<blockquote class="modal-motto">' +
       escapeHtml(candidate.motto) +
       "</blockquote>" +
+      renderCredentials(candidate) +
       '<div class="modal-platforms">' +
       "<h3>Platforms</h3>" +
       renderPlatformContent(candidate) +
