@@ -123,7 +123,7 @@ const CANDIDATES = [
     name: "Janna Fe C. Gloriani",
     position: "Vice President for Partnerships and Sponsorships",
     category: "execo",
-    image: "assets/candidates/40.png",
+    image: "assets/candidates/42.png",
     motto: "Relationship status: In partnership.",
     platformItems: [
       { title: "Beyond the Bias (Continuation of Break the Bias)", description: "Beyond the Bias continues the organization's commitment to mental health awareness, leadership development, and student empowerment within the ECE community." },
@@ -139,7 +139,7 @@ const CANDIDATES = [
     name: "Jemaelah P. Concepcion",
     position: "Vice President for Documentation & Records",
     category: "execo",
-    image: "assets/candidates/41.png",
+    image: "assets/candidates/40.png",
     motto: "Leading with Order, Recording with Purpose.",
     platformItems: [
       { title: "Organized and Reliable Documentation", description: "Having served as a member of a Documentation Unit, I have gained experience in handling reports, records, and event documentation. I will use this experience to ensure that all organizational documents are accurate, organized, and properly maintained." },
@@ -156,7 +156,7 @@ const CANDIDATES = [
     name: "Johnreign Jayden P. Ancheta",
     position: "Vice President for Documentation & Records",
     category: "execo",
-    image: "assets/candidates/42.png",
+    image: "assets/candidates/41.png",
     motto: "If things doesn't get better on their own, make it better with your all!",
     platformItems: [
       { title: "Docu-Archive", description: "Organized archive of organizational events and publication materials." },
@@ -208,7 +208,7 @@ const CANDIDATES = [
     name: "Racklen B. Añago",
     position: "Technical Creatives",
     category: "oc3",
-    image: "assets/candidates/46.png",
+    image: "assets/candidates/48.png",
     motto: "Eyes on the Stars, Feet on the Ground",
     platformItems: [
       { title: "Digital Legacy Project", description: "Create a centralized archive of JIECEP publications, event highlights, achievements, and creative materials to preserve the organization's history and make resources accessible for future officers." },
@@ -222,7 +222,7 @@ const CANDIDATES = [
     name: "Junix Saab S. Maya",
     position: "PIO for Internal Affairs",
     category: "oc3",
-    image: "assets/candidates/47.png",
+    image: "assets/candidates/46.png",
     motto: "Transparency in Action, Service in Motion.",
     platformItems: [
       "Establish an efficient, real-time notification system within CvSU Jr. IECEP to keep all student members promptly updated on upcoming organizational programs, projects, and activities.",
@@ -236,7 +236,7 @@ const CANDIDATES = [
     name: "Sharri Alanis L. Reola",
     position: "PIO for External Affairs",
     category: "oc3",
-    image: "assets/candidates/48.png",
+    image: "assets/candidates/47.png",
     motto: "\"I am not throwing away my shot\" -Alexander Hamilton",
     platformItems: [
       "Ensure the dissemination of information within the regional chapter and Cavite State University in a transparent, timely, and accurate manner.",
@@ -268,7 +268,7 @@ const CANDIDATES = [
     name: "Mary Katrice Anne R. Panganiban",
     position: "Events Documentation Unit",
     category: "edu",
-    image: "assets/candidates/50.png",
+    image: "assets/candidates/51.png",
     motto: "\"Don't tell people how to do things. Tell them what to do and let them surprise you with their results.\" - Gen. George Patton",
     platformItems: [
       { title: "Memory Wall Project", description: "Create a digital or physical memory wall featuring photos, quotes, and highlights from events throughout the year. This will helps members remember meaningful experiences, strengthens the sense of community, and showcases the organization's journey and achievements." },
@@ -281,7 +281,7 @@ const CANDIDATES = [
     name: "Dallin Russel C. Velasco",
     position: "Events Documentation Unit",
     category: "edu",
-    image: "assets/candidates/51.png",
+    image: "assets/candidates/50.png",
     motto: "Transforming limitations into possibilities.",
     platformTagline: "HELP, HANDLES, & HIGHLIGHTS",
     platformItems: [
