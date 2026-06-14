@@ -609,12 +609,15 @@ body.modal-open {
   margin-bottom: 0.85rem;
 }
 
+.modal-platforms li strong,
 .platform-list li strong {
   display: block;
   margin-bottom: 0.25rem;
 }
 
-.platform-list li span {
+.modal-platforms li .platform-desc,
+.platform-list li span,
+.platform-list li .platform-desc {
   display: block;
   color: var(--brown);
 }

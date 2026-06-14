@@ -57,11 +57,12 @@
     if (candidate.platformSections) {
       candidate.platformSections.forEach(function (section) {
         html += '<div class="platform-section">';
-        html += "<h4>" + escapeHtml(section.title) + "</h4><ul>";
+        html += "<h4>" + escapeHtml(section.title) + "</h4>";
+        html += '<ul class="platform-list">';
         section.items.forEach(function (item) {
           html += "<li><strong>" + escapeHtml(item.title) + "</strong>";
           if (item.description) {
-            html += "<span>" + escapeHtml(item.description) + "</span>";
+            html += '<span class="platform-desc">' + escapeHtml(item.description) + "</span>";
           }
           html += "</li>";
         });
@@ -81,7 +82,7 @@
         html += "<li>";
         html += "<strong>" + escapeHtml(item.title) + "</strong>";
         if (item.description) {
-          html += "<span>" + escapeHtml(item.description) + "</span>";
+          html += '<span class="platform-desc">' + escapeHtml(item.description) + "</span>";
         }
         if (item.subItems) {
           html += "<ul class=" + '"platform-sublist">';
