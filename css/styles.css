@@ -681,6 +681,408 @@ body.modal-open {
   margin-top: 0.45rem;
 }
 
+/* ============================================================
+   VIEW SWITCHER + ELECTION RESULTS DASHBOARD
+   (appended for the AY 2026-2027 results release)
+   ============================================================ */
+
+.view-nav {
+  margin: 1.75rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.view-nav__btn {
+  font-family: var(--font-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+  padding: 0.7rem 1.4rem;
+  border: 3px solid var(--brown-dark);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--brown-dark);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.view-nav__btn:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, #ffe082, #ffb300);
+  box-shadow: 3px 3px 0 var(--brown-dark);
+}
+
+.view-nav__btn.is-active {
+  background: var(--brown-dark);
+  color: var(--gold-light);
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+
+.view {
+  display: none;
+  padding-top: 1.5rem;
+}
+
+.view--active {
+  display: block;
+}
+
+/* ---- Results intro ---- */
+.results-intro {
+  margin: 0 auto 1.75rem;
+  padding: 1.35rem 1.65rem;
+  background: rgba(255, 248, 231, 0.92);
+  border: 3px solid var(--brown-dark);
+  border-radius: 14px;
+  box-shadow: 8px 8px 0 var(--shadow);
+}
+
+.results-intro p {
+  margin: 0 0 0.85rem;
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+
+.results-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.results-intro strong {
+  color: var(--gold-dark);
+}
+
+/* ---- Headline stat cards ---- */
+.results-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--cream);
+  border: 3px solid var(--brown-dark);
+  border-radius: 14px;
+  box-shadow: 6px 6px 0 var(--shadow);
+  padding: 1.15rem 1.25rem;
+  text-align: center;
+}
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--gold-dark);
+  letter-spacing: 0.02em;
+}
+
+.stat-card__label {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+
+/* ---- Results block shell ---- */
+.results-block {
+  margin: 0 auto 2rem;
+  padding: 1.35rem 1.5rem 1.6rem;
+  background: rgba(255, 248, 231, 0.92);
+  border: 3px solid var(--brown-dark);
+  border-radius: 14px;
+  box-shadow: 8px 8px 0 var(--shadow);
+}
+
+.results-block__title {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: var(--brown-dark);
+}
+
+.results-block__note {
+  margin: 0 0 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--brown);
+}
+
+/* ---- Turnout chart (pure CSS bars) ---- */
+.turnout-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.turnout-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 90px;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.turnout-row__section {
+  font-family: var(--font-accent);
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+}
+
+.turnout-row__track {
+  position: relative;
+  height: 26px;
+  background: rgba(78, 52, 46, 0.12);
+  border: 2px solid var(--brown-dark);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.turnout-row__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffb300, #e65100);
+  border-right: 2px solid var(--brown-dark);
+  transition: width 0.4s ease;
+}
+
+.turnout-row__fill--low {
+  background: linear-gradient(90deg, #ff8a80, #c62828);
+}
+
+.turnout-row__pct {
+  font-family: var(--font-accent);
+  font-size: 0.92rem;
+  text-align: right;
+}
+
+.turnout-legend {
+  margin-top: 0.85rem;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: var(--brown);
+}
+
+.turnout-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.turnout-legend i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1.5px solid var(--brown-dark);
+}
+
+/* ---- Officer groups ---- */
+.officer-tier {
+  margin-bottom: 1.5rem;
+}
+
+.officer-tier:last-child {
+  margin-bottom: 0;
+}
+
+.officer-tier__title {
+  margin: 0 0 0.75rem;
+  padding: 0.45rem 0.85rem;
+  background: linear-gradient(180deg, #ffe082, #ffb300);
+  border: 2px solid var(--brown-dark);
+  border-radius: 8px;
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* ---- Winner cards (clickable -> platform modal) ---- */
+.winners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.winner-card {
+  background: var(--white);
+  border: 3px solid var(--brown-dark);
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 var(--shadow);
+  padding: 0.95rem 1.05rem 1.05rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.winner-card:hover,
+.winner-card:focus {
+  transform: translateY(-3px);
+  box-shadow: 7px 8px 0 var(--shadow);
+  outline: none;
+}
+
+.winner-card--contested {
+  border-color: var(--gold-dark);
+  background: linear-gradient(180deg, #fff8e7, #fff3c4);
+}
+
+.winner-card--multi {
+  border-color: var(--brown);
+  background: rgba(255, 248, 231, 0.6);
+}
+
+.winner-card__position {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gold-dark);
+}
+
+.winner-card__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.winner-card__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.winner-card__votes {
+  font-family: var(--font-accent);
+  font-size: 1.05rem;
+  color: var(--brown);
+}
+
+.winner-card__pct {
+  font-family: var(--font-accent);
+  font-size: 1.35rem;
+  color: var(--gold-dark);
+}
+
+.winner-card__badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1.5px solid var(--brown-dark);
+  background: var(--gold);
+  align-self: flex-start;
+}
+
+.winner-card__badge--contested { background: #ffd54f; }
+.winner-card__badge--multi { background: #d7ccc8; }
+
+.winner-card__cta {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-top: 0.15rem;
+}
+
+/* ---- Contested race runner-up chip ---- */
+.runnerup-row {
+  margin-top: 0.55rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(120, 90, 80, 0.1);
+  border-left: 4px solid var(--brown);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.9rem;
+}
+
+.runnerup-row__name {
+  color: var(--brown);
+}
+
+.runnerup-row__pct {
+  font-family: var(--font-accent);
+  color: var(--brown);
+}
+
+/* ---- Multi-seat roster ---- */
+.multi-roster {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.multi-roster__member {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed rgba(78, 52, 46, 0.3);
+}
+
+.multi-roster__member:last-child {
+  border-bottom: none;
+}
+
+.multi-roster__name {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.multi-roster__name:hover {
+  color: var(--gold-dark);
+  text-decoration: underline;
+}
+
+.multi-roster__pct {
+  font-family: var(--font-accent);
+  color: var(--brown);
+  font-size: 0.92rem;
+}
+
+.multi-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--brown);
+}
+
+/* ---- Footer note ---- */
+.results-footer-note {
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  color: var(--cream);
+}
+
+.results-footer-note p {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* ---- Responsive ---- */
 @media (max-width: 640px) {
   .header-top {
     justify-content: center;
@@ -702,5 +1104,22 @@ body.modal-open {
 
   .filter-bar {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .turnout-row {
+    grid-template-columns: 55px 1fr 75px;
+    gap: 0.5rem;
+  }
+
+  .turnout-row__section {
+    font-size: 0.82rem;
+  }
+
+  .results-block__title {
+    font-size: 1.5rem;
+  }
+
+  .winners-grid {
+    grid-template-columns: 1fr;
   }
 }

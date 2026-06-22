@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Official candidates for the CvSU Jr. IECEP Elections A.Y. 2026-2027. Meet the aspiring leaders, explore their platforms, and stay informed." />
-  <title>CvSU Jr. IECEP Elections 2026 | Official Candidates</title>
+  <meta name="description" content="Official Election Returns for the CvSU Jr. IECEP Elections A.Y. 2026-2027. View the final canvassed results, turnout by section, and meet the elected officers." />
+  <title>CvSU Jr. IECEP Election Returns 2026–2027 | Official Results</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -41,40 +41,91 @@
       </div>
 
       <section class="hero">
-        <span class="hero-eyebrow">Official Candidates</span>
+        <span class="hero-eyebrow">Official Election Returns</span>
         <h1>
-          <span>2026 Elections</span>
+          <span>2026–2027 Elections</span>
           CvSU Jr. IECEP
         </h1>
         <p class="hero-tagline">Sharks in Action, Leaders with Purpose.</p>
         <div class="hero-meta">
-          <span>A.Y. 2026-2027</span>
+          <span>A.Y. 2026–2027</span>
           <span>Fair · Honest · Transparent</span>
         </div>
       </section>
+
+      <!-- View switcher -->
+      <nav class="view-nav" aria-label="Switch between election results and candidate profiles">
+        <button type="button" class="view-nav__btn is-active" data-view="results" aria-pressed="true">
+          Election Results
+        </button>
+        <button type="button" class="view-nav__btn" data-view="candidates" aria-pressed="false">
+          Meet the Candidates
+        </button>
+      </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="intro">
-      <p>
-        The CvSU Jr. IECEP Commission on Elections proudly presents the official candidates
-        for A.Y. 2026-2027. All candidates have successfully completed the screening process
-        and complied with documentary requirements. Browse each profile to learn about their
-        mottos and platforms before casting your vote.
-      </p>
-    </section>
-
-    <section class="controls" aria-label="Filter candidates by office">
-      <p class="controls-label">Filter by Office</p>
-      <div class="search-wrap">
-        <input id="search-input" type="search" placeholder="Search by name, position, or motto..." aria-label="Search candidates" />
+    <!-- ============ RESULTS VIEW (front page) ============ -->
+    <section id="view-results" class="view view--active" aria-label="Election results">
+      <div class="results-intro">
+        <p>
+          The votes have been cast. The count is final. And the voice of <strong>CvSU Jr. IECEP</strong> has spoken.
+        </p>
+        <p>
+          Following a transparent and closely monitored election for Academic Year 2026–2027, the Commission on
+          Elections proudly releases the official Election Returns. Every vote was verified, canvassed, and counted
+          with the fairness our organization deserves. The figures below reflect the complete and final tally of
+          all ballots cast during the official election period.
+        </p>
       </div>
-      <div id="filter-bar" class="filter-bar"></div>
+
+      <!-- Headline stat cards -->
+      <div id="results-stats" class="results-stats" aria-label="Election summary"></div>
+
+      <!-- Turnout panel -->
+      <section class="results-block" aria-label="Voter turnout by section">
+        <h2 class="results-block__title">Voter Turnout by BSECE Section</h2>
+        <p class="results-block__note">Sections 5-1 and 5-2 are excluded from the eligible-voter pool.</p>
+        <div id="turnout-chart" class="turnout-chart"></div>
+      </section>
+
+      <!-- Winners, grouped by tier -->
+      <section class="results-block" aria-label="Elected officers">
+        <h2 class="results-block__title">Elected Officers — A.Y. 2026–2027</h2>
+        <p class="results-block__note">
+          Click any officer to view their platform. Races shown with both candidates were contested;
+          all other seats had a single candidate. Events Documentation Unit is a multi-seat unit — all members elected.
+        </p>
+        <div id="results-officers"></div>
+      </section>
+
+      <div class="results-footer-note">
+        <p>Results are final and canvassed by the CvSU Jr. IECEP Commission on Elections.</p>
+      </div>
     </section>
 
-    <p id="result-count" class="result-count"></p>
-    <section id="candidate-grid" class="candidate-grid" aria-live="polite"></section>
+    <!-- ============ CANDIDATES VIEW ============ -->
+    <section id="view-candidates" class="view" hidden aria-label="Candidate profiles">
+      <div class="intro">
+        <p>
+          Meet the candidates of the CvSU Jr. IECEP Elections for A.Y. 2026–2027. All candidates completed the
+          screening process and complied with documentary requirements. Browse each profile to learn about their
+          mottos and platforms.
+        </p>
+      </div>
+
+      <section class="controls" aria-label="Filter candidates by office">
+        <p class="controls-label">Filter by Office</p>
+        <div class="search-wrap">
+          <input id="search-input" type="search" placeholder="Search by name, position, or motto..." aria-label="Search candidates" />
+        </div>
+        <div id="filter-bar" class="filter-bar"></div>
+      </section>
+
+      <p id="result-count" class="result-count"></p>
+      <section id="candidate-grid" class="candidate-grid" aria-live="polite"></section>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -105,6 +156,7 @@
     </div>
   </footer>
 
+  <!-- Shared candidate platform modal -->
   <div id="modal-backdrop" class="modal-backdrop" hidden></div>
   <div id="candidate-modal" class="candidate-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-panel">
@@ -115,6 +167,7 @@
 
   <script src="js/candidates.js"></script>
   <script src="js/credentials.js"></script>
+  <script src="js/results.js"></script>
   <script src="js/app.js"></script>
   <script src="js/audio.js"></script>
 </body>
